@@ -1,0 +1,21 @@
+body {
+    font-family: system-ui, sans-serif;
+  }
+  
+  div {
+    background-color: darkslategrey;
+    /* This makes the width of the div the width required by its content! */
+    width: fit-content;
+    padding: 8px;
+  }
+  
+  button {
+    margin: 8px;
+  }
+  
+  .green-btn {
+    background-color: green;
+    color: white;
+    font-size: bold;
+    outline: 0px;
+  }
