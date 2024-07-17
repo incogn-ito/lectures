@@ -1,11 +1,12 @@
 console.log("test")
 
-// const favFoods = ['tacos', 'cheese', 'freeze pops']
+const favFoods = ['tacos', 'cheese', 'freeze pops']
 
-/*
+
 // for loop -----------------------------------------------------------
 
 // for loop is an imperative function code: more definition to it / tells comp how to iterate
+
 for (let i=0; i < favFoods.length; i++) {
     console.log(favFoods[i]) // if you put a 1 here, you get an infinite loop
 }
@@ -35,47 +36,47 @@ const mappedArray = array.map((element, index, array) => {
 console.log(mappedArray)
 
 
-const nums = [1, 2, 3]
+// const nums = [1, 2, 3]
 
-const squared = nums.map((num) => {
-    //code block
-    return num * num 
-})
-console.log(squared)
+// const squared = nums.map((num) => {
+//     //code block
+//     return num * num 
+// })
+// console.log(squared)
 
 /*
 
-[] <-- before any iterations
+ [] <-- before any iterations
  [1] <-- after first iteration
  [1, 4] <-- after second iteration
 
 */
 
-// const instructors = ['Beryl', 'Hunter', 'Joe', 'Jurgen', 'Ben', 'David']
+const instructors = ['Beryl', 'Hunter', 'Joe', 'Jurgen', 'Ben', 'David']
 
-// instructors.map((instructor) => {
-//     console.log(`${instructor} is awesome`)
-// }) 
+instructors.map((instructor) => {
+    console.log(`${instructor} is awesome`)
+}) 
 // return instructor + ` is awesome' --> is another less elegant to write that console.log
-    
+
 // if you're storing the results as a variable then you would need to write the function below like:
 
-// const awesomeInstructors = instructors.map((instructor) => {
-//     return (`${instructor} is awesome`)
-// }) 
-// console.log(awesomeInstuctors)
+const awesomeInstructors = instructors.map((instructor) => {
+    return (`${instructor} is awesome`)
+}) 
+console.log(awesomeInstuctors)
 
 
-// const arr1 = [true, false, true, false, false, true]
+const arr1 = [true, false, true, false, false, true]
 
-// const filteredArr1 = arr1.filter((element) => {
-//   return element;
-// });
+const filteredArr1 = arr1.filter((element) => {
+  return element;
+})
 
-// console.log(filteredArr); // [true, true, true]
+console.log(filteredArr); // [true, true, true]
 
 // filter() method ---------------------------------------------
-/*
+
 
 const arr = [true, false, 0, 'string', '', null, undefined, 42]
 
@@ -165,14 +166,14 @@ console.log()
 // console.log(total)
 
 // Level up conetn 
-reduce() ---------------------------------------------------
+// reduce() ---------------------------------------------------
 
 const nums = [25, 5, 100, 10]
 
 let sum = nums.reduce((accumulator, nu) => {
     console.log(`accuulator: ${accumulator}, num: ${num}`)
 })
-*/
+
 
 // Lesson on square brackts
 
