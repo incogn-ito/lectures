@@ -74,7 +74,8 @@ console.log(squared)
 
 // console.log(filteredArr); // [true, true, true]
 
-// filter method:
+// filter() method ---------------------------------------------
+/*
 
 const arr = [true, false, 0, 'string', '', null, undefined, 42]
 
@@ -83,12 +84,12 @@ const filteredArr = arr.filter((element) => {
 });
 console.log(filteredArr); // [true, 'string', 42]
 
-const nums2 = [100, 2, 5, 42, 99]
+// const nums2 = [100, 2, 5, 42, 99]
 
-const odds = nums2.filter((num2) => {
-    return num2 % 2
-})
-console.log(odds)
+// const odds = nums2.filter((num2) => {
+//     return num2 % 2
+// })
+// console.log(odds)
 
 const people = ['jerks', 'nice people', 'jerks', 'nice people', 'nice people'];
 
@@ -129,14 +130,13 @@ const missingCarIdx = cars.findIndex((car) => {
 });
   console.log(missingCarIdx) // missingCarIdx = -1 (because the index number doesn't exist)
 
-  // some method ---------------------------------------
+  // some () method ---------------------------------------
 
    const  hasFord = cars.some((car) => {
     return car.make === 'Ford';
    })
    console.log(hasFord) // true (because there is a Ford in our Array)
   
-// every method -----------------------------------------
 
 const thingsInMyRoom = [
     'random elephant', 
@@ -146,7 +146,83 @@ const thingsInMyRoom = [
   ];
   
   const isEverythingInMyRoomARandomElephant = thingsInMyRoom.some((thing) => {
-    return thing === 'random elephant'
+    return thing === 'random elephant'  
   })
-console.log(isEverythingInMyRoomARandomElephant) // log - 
+console.log(isEverythingInMyRoomARandomElephant) // true
+
+// every() method -----------------------------------------
+
+const everyCarIsBlue = cars.every((car) => {
+    //return car.color === "blue"
+    return car.year > 50 // is every car older than 50 years, if
+})
+console.log(everyCarIsBlue) // false (because not every car is blue)
+console.log()
+
+// const nums.forEach(() => {  // old way of doing it from last week arrays lab. more elegantw way above
+//     total += num
+// })
+// console.log(total)
+
+// Level up conetn 
+reduce() ---------------------------------------------------
+
+const nums = [25, 5, 100, 10]
+
+let sum = nums.reduce((accumulator, nu) => {
+    console.log(`accuulator: ${accumulator}, num: ${num}`)
+})
+*/
+
+// Lesson on square brackts
+
+const person = {
+    name: "Ben",
+    age: 25,
+    location: "Jonestown, TX",
+    pets: ["Jack", "Ruby"],
+    friends: ["Jurgen", "David"]
+}
+
+let variable = 'pets'
+console.log(person.location)
+console.log(person[variable])
+
+// dictionaries (python) are to objects as arrays are to lists (javaScript)
+
+// 
+
+const voteArr = ['yes', 'no', 'yes', 'no', 'no', 'no', 'yes', 'yes', 'no', 'no', 'maybe', 'RuPaul', 'waffles']
+
+function voteTallyDot(arr) {
+  const tally = {yes: 0, no: 0, maybe: 0}
+  for (let i = 0; i < arr.length; i++) {
+    const vote = arr[i]
+    if (vote === 'yes') {
+      tally.yes = tally.yes + 1
+    } else if (vote === 'no') {
+      tally.no = tally.no + 1
+    } else if (vote === 'maybe') {
+      tally.maybe = tally.maybe + 1
+    }
+  }
+  return tally
+}
+
+function voteTallySquare(arr) {
+  const tally = {}
+  for (let i = 0; i < arr.length; i++) {
+    const vote = arr[i]
+    if (tally[vote]) {
+      // property exists, add 1 to it
+      tally[vote] += 1
+    } else {
+      // property doesn't exist, create it (as 1)
+      tally[vote] = 1
+    }
+  }
+  return tally
+}
+
+console.log(voteTallySquare(voteArr))
 
